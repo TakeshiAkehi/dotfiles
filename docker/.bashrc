@@ -1,0 +1,1 @@
+source ~/dotfiles/dotrc.bash bash
