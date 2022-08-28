@@ -76,6 +76,7 @@ __dot_setup(){
         git clone https://github.com/b4b4r07/enhancd.git ${DOT_DIR_EXT}/enhancd
         echo "source ${DOT_DIR_EXT}/enhancd/init.sh" >> ~/.bash_profile
         source ~/.bash_profile
+        export PS1="\[\033[38;5;11m\]\u@\W\[$(tput sgr0)\]: \[$(tput sgr0)\]\[\033[38;5;45m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]\n\\$\[$(tput sgr0)\]"
     else
         echo "enhancd is supported for only bash"
     fi

@@ -28,6 +28,15 @@ __dot::help::reopen(){
     echo -e "re-open current shel"
 }
 
+__dot::app::dot_configure(){
+    echo "cd ~"
+    echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
+    echo "bash dotfiles/setup.bash"
+}
+__dot::help::dot_configure(){
+    echo -e "print setup shortcut command"
+}
+
 __dot::app::hp(){
     if [ ${DOT_SH} = "bash" ]; then
         local names=`typeset | grep -E "^__dot::app" | __dot::gnu::sed -r 's/^__dot::app::(.*)\s\(\)\s/\1/'`
