@@ -31,7 +31,7 @@ __dot::help::reopen(){
 __dot::app::dot_configure(){
     echo "cd ~"
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
-    echo "bash dotfiles/setup.bash"
+    echo "source dotfiles/setup.bash"
 }
 __dot::help::dot_configure(){
     echo -e "print setup shortcut command"

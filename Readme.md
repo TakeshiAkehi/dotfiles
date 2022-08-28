@@ -40,7 +40,7 @@ for bash setup shortcut
 ```
 cd ~
 git clone https://github.com/TakeshiAkehi/dotfiles.git
-bash setup.bash
+source setup.bash
 ```
 
 
