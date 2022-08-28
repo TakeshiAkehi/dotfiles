@@ -1,6 +1,6 @@
-CDIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)`
+CDIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
-source ${CDIR}/dotrc.bash
+source ${CDIR}/dotrc.bash bash
 __dot_setup
 
 echo "source ${CDIR}/dotrc.bash bash" >> ~/.bashrc
