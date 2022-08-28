@@ -22,7 +22,7 @@ brew install gnu-sed
 ```
 # setup
 cd ~
-git clone
+git clone https://github.com/TakeshiAkehi/dotfiles.git
 
 # .zshrc
 echo "source ~/dotfiles/dotrc.bash zsh" >> ~/.zshrc
@@ -35,6 +35,14 @@ source ~/.bashrc
 __dot_setup bash
 
 ```
+
+for bash setup shortcut 
+```
+cd ~
+git clone https://github.com/TakeshiAkehi/dotfiles.git
+bash setup.bash
+```
+
 
 # test environment
 
