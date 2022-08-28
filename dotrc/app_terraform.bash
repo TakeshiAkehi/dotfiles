@@ -1,5 +1,5 @@
 
-__dot::app::fterraform() {
+__dot::app::fzterraform() {
     __dot::exec::interactive "\
 tfenv list  (list of installed env)\n\
 tfenv use [VERSION] (set version)\n\
@@ -15,6 +15,6 @@ terraform graph | dot -Tpdf > graph.pdf (visualize with graphviz)
 "
 }
 
-__dot::help::fterraform() {
+__dot::help::fzterraform() {
     echo "interactive help for terraform"
 }

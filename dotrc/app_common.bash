@@ -1,29 +1,31 @@
 __dot::app::zshrc(){
-    "vim ~/.zshrc; source ~/.zshrc"
+    vim ~/.zshrc
+    source ~/.zshrc
 }
 __dot::help::zshrc(){
     echo -e "helpmsg of zshrc \n newline availabl"
 }
 
 __dot::app::bashrc(){
-    "vim ~/.bashrc; source ~/.bashrc"
+    vim ~/.bashrc
+    source ~/.bashrc
 }
 __dot::help::bashrc(){
     echo -e "helpmsg of bashrc \n newline availabl"
 }
 
-__dot::app::shrelogin(){
+__dot::app::relogin(){
      exec $SHELL -l
 }
-__dot::help::shrelogin(){
+__dot::help::relogin(){
     echo -e "re-login to shell"
 }
 
-__dot::app::shduplicate(){
+__dot::app::reopen(){
      exec $0 -l
 }
-__dot::help::shduplicate(){
-    echo -e "duplicate current shel"
+__dot::help::reopen(){
+    echo -e "re-open current shel"
 }
 
 __dot::app::hp(){

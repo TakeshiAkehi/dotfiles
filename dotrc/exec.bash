@@ -2,7 +2,7 @@
 __dot::exec::exec(){
     echo "$1"
     if [ ${DOT_SH_LIC} = 'BSD' ]; then
-        print -s "${CMD}"
+        print -s "$1"
     else
         history -s "$1"
     fi
