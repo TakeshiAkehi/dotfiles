@@ -29,7 +29,7 @@ echo "source ~/dotfiles/dotrc.bash zsh" >> ~/.zshrc
 source ~/.zshrc
 
 # .bashrc
-echo "source ~/dotfiles/dotrc.bash bash" >> ~/.zshrc
+echo "source ~/dotfiles/dotrc.bash bash" >> ~/.bashrc
 source ~/.bashrc
 
 # initial setup
