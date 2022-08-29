@@ -16,3 +16,4 @@ if [ ${DOT_SH_LIC} = 'BSD' ]; then
         gmv "$@"
     }
 fi
+

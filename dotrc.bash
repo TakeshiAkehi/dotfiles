@@ -78,6 +78,7 @@ __dot_setup(){
         source ~/.bash_profile
         export PS1="\[\033[38;5;11m\]\u@\W\[$(tput sgr0)\]: \[$(tput sgr0)\]\[\033[38;5;45m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]\n\\$ \[$(tput sgr0)\]"
         echo "export PS1=\"${PS1}\"" >> ~/.bashrc
+        echo "export ENHANCD_HOOK_AFTER_CD=ls" >> ~/.bashrc
     else
         echo "enhancd is supported for only bash"
     fi
