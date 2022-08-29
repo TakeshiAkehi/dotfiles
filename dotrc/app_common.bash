@@ -28,6 +28,14 @@ __dot::help::reopen(){
     echo -e "re-open current shel"
 }
 
+__dot::app::cc(){
+    cd "$@"
+    ls
+}
+__dot::help::cc(){
+    echo -e "ls after cd"
+}
+
 __dot::app::hp(){
     if [ ${DOT_SH} = "bash" ]; then
         local names=`typeset | grep -E "^__dot::app" | __dot::gnu::sed -r 's/^__dot::app::(.*)\s\(\)\s/\1/'`
