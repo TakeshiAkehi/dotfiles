@@ -28,13 +28,6 @@ __dot::help::reopen(){
     echo -e "re-open current shel"
 }
 
-__dot::app::cc(){
-    cd "$@"
-    ls
-}
-__dot::help::cc(){
-    echo -e "ls after cd"
-
 __dot::app::dot_configure(){
     echo "cd ~"
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
