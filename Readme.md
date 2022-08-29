@@ -22,20 +22,27 @@ brew install gnu-sed
 ```
 # setup
 cd ~
-git clone
+git clone https://github.com/TakeshiAkehi/dotfiles.git
 
 # .zshrc
 echo "source ~/dotfiles/dotrc.bash zsh" >> ~/.zshrc
 source ~/.zshrc
+__dot_setup zsh
 
 # .bashrc
-echo "source ~/dotfiles/dotrc.bash bash" >> ~/.zshrc
+echo "source ~/dotfiles/dotrc.bash bash" >> ~/.bashrc
 source ~/.bashrc
+__dot_setup bash
 
-# initial setup
-#  - this command overwrites .vimrc
-__dot_setup
 ```
+
+for bash setup shortcut 
+```
+cd ~
+git clone https://github.com/TakeshiAkehi/dotfiles.git
+source dotfiles/setup.bash
+```
+
 
 # test environment
 

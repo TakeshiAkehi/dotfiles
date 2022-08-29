@@ -34,6 +34,14 @@ __dot::app::cc(){
 }
 __dot::help::cc(){
     echo -e "ls after cd"
+
+__dot::app::dot_configure(){
+    echo "cd ~"
+    echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
+    echo "source dotfiles/setup.bash"
+}
+__dot::help::dot_configure(){
+    echo -e "print setup shortcut command"
 }
 
 __dot::app::hp(){
