@@ -1,4 +1,4 @@
-export DOT_DEBUG=false
+export DOT_DEBUG=true
 export DOT_ROOT=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 export DOT_DIR_SCRIPT=${DOT_ROOT}/dotrc
 export DOT_DIR_HELP=${DOT_ROOT}/help
@@ -102,7 +102,8 @@ __dot::dotrc::setup(){
         echo "GIT_PS1_SHOWUNTRACKEDFILES=1" >> ~/.bashrc
         echo "GIT_PS1_SHOWSTASHSTATE=1" >> ~/.bashrc
 
-        echo "export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] \$ '" >> ~/.bashrc
+        source "${gp}"
+        echo "export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\]\n\$ '" >> ~/.bashrc
 
     else
         # enhancd
