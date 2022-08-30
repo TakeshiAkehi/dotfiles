@@ -34,7 +34,7 @@ __dot::app::dot_configure(){
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
     echo "cd ~/dotfiles"
     echo "git pull origin master"
-    echo "source dotfiles/setup.bash"
+    echo "source setup.bash"
     echo "cd \"\${DOT_TMP}\""
     echo ""
 }
