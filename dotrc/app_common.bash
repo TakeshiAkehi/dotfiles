@@ -91,17 +91,17 @@ __dot::help::hist() {
     __dot::help::hi
 }
 
-__dot::app::cpp() {
+__dot::app::cp() {
     __dot::gnu::cp "$@"
 }
-__dot::help::cpp() {
+__dot::help::cp() {
     echo "gnu cp"
 }
 
-__dot::app::lss() {
+__dot::app::ls() {
     __dot::gnu::ls "$@" "--color=auto"
 }
-__dot::help::lss() {
+__dot::help::ls() {
     echo "gnu ls colorized"
 }
 
@@ -112,16 +112,16 @@ __dot::help::lsraw() {
     echo "gnu ls"
 }
 
-__dot::app::mvv() {
+__dot::app::mv() {
     __dot::gnu::mv "$@"
 }
-__dot::help::mvv() {
+__dot::help::mv() {
     echo "gnu mv"
 }
 
-__dot::app::rmm() {
+__dot::app::rm() {
     __dot::gnu::rm "$@"
 }
-__dot::help::rmm() {
+__dot::help::rm() {
     echo "gnu rm"
 }
