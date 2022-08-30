@@ -58,3 +58,5 @@ make bash
 make zsh
 
 ```
+
+https://qiita.com/varmil/items/9b0aeafa85975474e9b6

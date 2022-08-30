@@ -91,6 +91,11 @@ __dot::dotrc::setup(){
         # source
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
 
+        # git comp
+        wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+        chmod a+x ~/.git-completion.bash
+        echo "source ~/.git-completion.bash" >> ~/.bashrc
+
     else
         # enhancd
         echo "enhancd is supported for only bash"
