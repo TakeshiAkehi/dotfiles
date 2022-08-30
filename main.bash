@@ -89,11 +89,13 @@ __dot::dotrc::setup(){
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
 
         # git comp
-        ln -snfv ${DOT_DIR_CONF}/.git_completion.bash ~
+        # ln -snfv ${DOT_DIR_CONF}/.git_completion.bash ~
+        cp ${DOT_DIR_CONF}/.git_completion.bash ~
         chmod a+x ${HOME}/.git-completion.bash
         echo "source ~/.git-completion.bash" >> ~/.bashrc
 
-        ln -snfv ${DOT_DIR_CONF}/.git_prompt.sh ~
+        # ln -snfv ${DOT_DIR_CONF}/.git_prompt.sh ~
+        cp ${DOT_DIR_CONF}/.git_prompt.sh ~
         chmod a+x ${HOME}/.git-prompt.sh
         echo "source ~/.git-prompt.sh" >> ~/.bashrc
         
