@@ -35,6 +35,7 @@ __dot::dotrc::dprint(){
 }
 
 __dot::dotrc::source(){
+    __dot::dotrc::dprint "dotrc::source"
     for file in ${DOT_DIR_SCRIPT}/*; do
         if [ -f $file ] ; then
             __dot::dotrc::dprint "source : $file"
@@ -44,6 +45,8 @@ __dot::dotrc::source(){
 }
 
 __dot::dotrc::regisiter_apps(){
+    __dot::dotrc::dprint "dotrc::registreapps"
+
     if [ ${DOT_SH} = "bash" ]; then
         local names=`typeset | grep -E "^__dot::app" | __dot::gnu::sed -r 's/^__dot::app::(.*)\s\(\)\s/\1/'`
     fi
@@ -60,11 +63,13 @@ __dot::dotrc::regisiter_apps(){
         eval "${astr}"
 
         # export help file
+        __dot::dotrc::dprint "creating help file : ${DOT_DIR_HELP}/${name}.txt"
         __dot::help::${name} > "${DOT_DIR_HELP}/${name}.txt"
     done
 }
 
 __dot::dotrc::dotrc(){
+    __dot::dotrc::dprint "dotrc::dotrc"
     __dot::dotrc::dprint "OS : $DOT_OS"
     __dot::dotrc::dprint "LIC : $DOT_SH_LIC"
     __dot::dotrc::source
@@ -72,6 +77,7 @@ __dot::dotrc::dotrc(){
 }
 
 __dot::dotrc::setup(){
+    __dot::dotrc::dprint "dotrc::setup"
     ln -snfv ${DOT_DIR_CONF}/.vimrc ~
     if [ ${DOT_SH} = "bash" ]; then
         # enhancd
