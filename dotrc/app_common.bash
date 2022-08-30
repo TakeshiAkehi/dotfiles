@@ -34,10 +34,12 @@ __dot::app::dot_configure(){
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
     echo "cd ~/dotfiles"
     echo "git pull origin master"
-    echo "source setup.bash"
+    echo "source ~/dotfiles/setup.bash"
     echo "cd \"\${DOT_TMP}\""
     echo ""
 }
+
+
 __dot::help::dot_configure(){
     echo -e "print setup shortcut command"
 }
@@ -89,17 +91,17 @@ __dot::help::hist() {
     __dot::help::hi
 }
 
-__dot::app::cp() {
+__dot::app::cpp() {
     __dot::gnu::cp "$@"
 }
-__dot::help::cp() {
+__dot::help::cpp() {
     echo "gnu cp"
 }
 
-__dot::app::ls() {
+__dot::app::lss() {
     __dot::gnu::ls "$@" "--color=auto"
 }
-__dot::help::ls() {
+__dot::help::lss() {
     echo "gnu ls colorized"
 }
 
@@ -110,16 +112,16 @@ __dot::help::lsraw() {
     echo "gnu ls"
 }
 
-__dot::app::mv() {
+__dot::app::mvv() {
     __dot::gnu::mv "$@"
 }
-__dot::help::mv() {
+__dot::help::mvv() {
     echo "gnu mv"
 }
 
-__dot::app::rm() {
+__dot::app::rmm() {
     __dot::gnu::rm "$@"
 }
-__dot::help::rm() {
+__dot::help::rmm() {
     echo "gnu rm"
 }
