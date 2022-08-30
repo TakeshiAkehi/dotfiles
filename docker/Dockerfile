@@ -11,4 +11,4 @@ RUN apt update && \
     apt install fzf -y &&\
     echo end
 
-WORKDIR /root/dotfiles
+WORKDIR /root
