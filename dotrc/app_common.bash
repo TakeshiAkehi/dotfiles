@@ -29,9 +29,11 @@ __dot::help::reopen(){
 }
 
 __dot::app::dot_configure(){
+    echo "export DOT_TMP=\`pwd\`"
     echo "cd ~"
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
     echo "source dotfiles/setup.bash"
+    echo "cd \"\${DOT_TMP}\""
 }
 __dot::help::dot_configure(){
     echo -e "print setup shortcut command"
@@ -82,4 +84,39 @@ __dot::app::hist() {
 }
 __dot::help::hist() {
     __dot::help::hi
+}
+
+__dot::app::cp() {
+    __dot::gnu::cp "$@"
+}
+__dot::help::cp() {
+    echo "gnu cp"
+}
+
+__dot::app::ls() {
+    __dot::gnu::ls "$@" "--color=auto"
+}
+__dot::help::ls() {
+    echo "gnu ls colorized"
+}
+
+__dot::app::lsraw() {
+    __dot::gnu::ls "$@"
+}
+__dot::help::lsraw() {
+    echo "gnu ls"
+}
+
+__dot::app::mv() {
+    __dot::gnu::mv "$@"
+}
+__dot::help::mv() {
+    echo "gnu mv"
+}
+
+__dot::app::rm() {
+    __dot::gnu::rm "$@"
+}
+__dot::help::rm() {
+    echo "gnu rm"
 }
