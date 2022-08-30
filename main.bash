@@ -1,4 +1,4 @@
-export DOT_DEBUG=true
+export DOT_DEBUG=false
 export DOT_ROOT=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 export DOT_DIR_SCRIPT=${DOT_ROOT}/dotrc
 export DOT_DIR_HELP=${DOT_ROOT}/help
@@ -99,6 +99,5 @@ __dot::dotrc::setup(){
         echo "source ${DOT_ROOT}/dotrc.bash zsh" >> ~/.zshrc
     fi
     source "${HOME}/.${DOT_SH}rc"
-    export DOT_DEBUG=false
 }
 
