@@ -28,6 +28,20 @@ __dot::help::reopen(){
     echo -e "re-open current shel"
 }
 
+__dot::app::rebash(){
+    source "${HOME}/.bashrc"
+}
+__dot::help::rebash(){
+    echo -e "re-source  bashrc"
+}
+
+__dot::app::rezsh(){
+    source "${HOME}/.zshrc"
+}
+__dot::help::rezsh(){
+    echo -e "re-source  rezsh"
+}
+
 __dot::app::dot_configure(){
     echo "export DOT_TMP=\`pwd\`"
     echo "cd ~"

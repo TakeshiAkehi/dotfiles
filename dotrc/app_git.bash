@@ -23,3 +23,17 @@ __dot::app::fzgit_checkout_commit(){
 __dot::help::fzgit_checkout_commit() {
     echo -e "interactive git checkouting to commit"
 }
+
+# __dot::app::fzgit(){
+#     TARGET=`git branch $1 | fzf --preview \
+#     "echo {} | tr -d ' *' | xargs git log --oneline --first-parent --graph --decorate --color=always" \
+#     | xargs echo | tr -d ' *' `
+
+#     CMD="${TARGET}"
+#     __dot::exec::exec "$CMD"
+# }
+
+# __dot::help::fzgit() {
+#     echo -e "interactive git branch selector\n\
+#     example : fzgit  \"git branch -d {}\" "
+# }
