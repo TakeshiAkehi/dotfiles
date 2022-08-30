@@ -29,14 +29,14 @@ __dot::help::reopen(){
 }
 
 __dot::app::dot_configure(){
-    # echo "export DOT_TMP=\`pwd\`"
-    # echo "cd ~"
+    echo "export DOT_TMP=\`pwd\`"
+    echo "cd ~"
     echo "git clone https://github.com/TakeshiAkehi/dotfiles.git"
-    # echo "cd ~/dotfiles"
-    # echo "git pull origin master"
-    # echo "source ~/dotfiles/setup.bash"
-    # echo "cd \"\${DOT_TMP}\""
-    # echo ""
+    echo "cd ~/dotfiles"
+    echo "git pull origin master"
+    echo "source ~/dotfiles/setup.bash bash"
+    echo "cd \"\${DOT_TMP}\""
+    echo ""
 }
 
 

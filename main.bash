@@ -99,6 +99,6 @@ __dot::dotrc::setup(){
         echo "source ${DOT_ROOT}/dotrc.bash zsh" >> ~/.zshrc
     fi
     source "${HOME}/.${DOT_SH}rc"
-
+    export DOT_DEBUG=false
 }
 
