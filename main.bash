@@ -104,7 +104,7 @@ __dot::dotrc::setup(){
         echo "GIT_PS1_SHOWSTASHSTATE=1" >> ~/.bashrc
 
         source "${gp}"
-        echo "export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\]\n\$ '" >> ~/.bashrc
+        echo "export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]\$(__git_ps1)\[\033[00m\]\n\$ '" >> ~/.bashrc
 
     else
         # enhancd
