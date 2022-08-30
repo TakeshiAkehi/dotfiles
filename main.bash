@@ -84,9 +84,6 @@ __dot::dotrc::setup(){
         git clone https://github.com/b4b4r07/enhancd.git ${DOT_DIR_EXT}/enhancd
         echo "source ${DOT_DIR_EXT}/enhancd/init.sh" >> ~/.bash_profile
         source ~/.bash_profile
-        export PS1="\[\033[38;5;11m\]\u@\W\[$(tput sgr0)\]: \[$(tput sgr0)\]\[\033[38;5;45m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]\n\\$ \[$(tput sgr0)\]"
-        echo "export PS1=\"${PS1}\"" >> ~/.bashrc
-        echo "export ENHANCD_HOOK_AFTER_CD=ls" >> ~/.bashrc
 
         # source
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
@@ -95,6 +92,17 @@ __dot::dotrc::setup(){
         wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
         chmod a+x ~/.git-completion.bash
         echo "source ~/.git-completion.bash" >> ~/.bashrc
+
+        wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+        chmod a+x ~/.git-prompt.sh
+        echo "source ~/.git-prompt.sh" >> ~/.bashrc
+        
+        echo "GIT_PS1_SHOWDIRTYSTATE=1" >> ~/.bashrc
+        echo "GIT_PS1_SHOWUPSTREAM=1" >> ~/.bashrc
+        echo "GIT_PS1_SHOWUNTRACKEDFILES=1" >> ~/.bashrc
+        echo "GIT_PS1_SHOWSTASHSTATE=1" >> ~/.bashrc
+
+        echo "export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] \$ '" >> ~/.bashrc
 
     else
         # enhancd
