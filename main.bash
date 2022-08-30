@@ -1,4 +1,4 @@
-export DOT_DEBUG=true
+export DOT_DEBUG=false
 export DOT_ROOT=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 export DOT_DIR_SCRIPT=${DOT_ROOT}/dotrc
 export DOT_DIR_HELP=${DOT_ROOT}/help
@@ -88,14 +88,15 @@ __dot::dotrc::setup(){
         # source
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
 
+        # git prompt
+        local gp="${DOT_DIR_CONF}/.git-prompt.sh"
+        cp "${gp}" "${HOME}"
+        echo "source ~/.git-prompt.sh" >> ~/.bashrc
+
         # git comp
         local gc="${DOT_DIR_CONF}/.git-completion.bash" 
         cp "${gc}" "${HOME}"
         echo "source ~/.git-completion.bash" >> ~/.bashrc
-
-        local gp="${DOT_DIR_CONF}/.git-prompt.sh"
-        cp "${gp}" "${HOME}"
-        echo "source ~/.git-prompt.sh" >> ~/.bashrc
         
         echo "GIT_PS1_SHOWDIRTYSTATE=1" >> ~/.bashrc
         echo "GIT_PS1_SHOWUPSTREAM=1" >> ~/.bashrc
