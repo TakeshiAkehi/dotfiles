@@ -89,11 +89,11 @@ __dot::dotrc::setup(){
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
 
         # git comp
-        wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+        ln -snfv ${DOT_DIR_CONF}/.git_completion.bash ~
         chmod a+x ~/.git-completion.bash
         echo "source ~/.git-completion.bash" >> ~/.bashrc
 
-        wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.git-prompt.sh
+        ln -snfv ${DOT_DIR_CONF}/.git_prompt.sh ~
         chmod a+x ~/.git-prompt.sh
         echo "source ~/.git-prompt.sh" >> ~/.bashrc
         
