@@ -139,3 +139,10 @@ __dot::app::rm() {
 __dot::help::rm() {
     echo "gnu rm"
 }
+
+__dot::app::sed() {
+    __dot::gnu::sed "$@"
+}
+__dot::help::sed() {
+    echo "gnu sed"
+}
