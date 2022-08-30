@@ -89,14 +89,12 @@ __dot::dotrc::setup(){
         echo "source ${DOT_ROOT}/dotrc.bash bash" >> ~/.bashrc
 
         # git comp
-        # ln -snfv ${DOT_DIR_CONF}/.git_completion.bash ~
-        cp "${DOT_DIR_CONF}/.git_completion.bash" "${HOME}"
-        # chmod a+x ${HOME}/.git-completion.bash
+        local gc="${DOT_DIR_CONF}/.git-completion.bash" 
+        cp "${gc}" "${HOME}"
         echo "source ~/.git-completion.bash" >> ~/.bashrc
 
-        # ln -snfv ${DOT_DIR_CONF}/.git_prompt.sh ~
-        # chmod a+x ${HOME}/.git-prompt.sh
-        cp "${DOT_DIR_CONF}/.git_prompt.sh" "${HOME}"
+        local gp="${DOT_DIR_CONF}/.git-prompt.sh"
+        cp "${gp}" "${HOME}"
         echo "source ~/.git-prompt.sh" >> ~/.bashrc
         
         echo "GIT_PS1_SHOWDIRTYSTATE=1" >> ~/.bashrc
